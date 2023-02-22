@@ -1,9 +1,17 @@
-drop table customers cascade;
-create table customers (
+drop table users cascade;
+create table users (
+   user_id serial primary key,
    first_name varchar(20) not null,
    last_name varchar(20) not null,
-   phone varchar(10) not null,
-   cust_id serial primary key
+   phone_number varchar(10) not null,
+   email varchar(50) not null,
+   password varchar(50) not null,
+   house_number varchar(10) not null,
+   street varchar(20) not null,
+   district varchar(20) not null,
+   city varchar(20) not null,
+   user_role int default 1 check (user_role >= 1 and user_role < 4),
+   hourly_rate int default 0 check (hourly_rate >= 0)
 );
 
 drop table orders cascade;
@@ -19,7 +27,7 @@ create table orders (
    street varchar(20) not null,
    cust_id integer not null,
    session_id integer default 1,
-   constraint customer_fk foreign key (cust_id) references customers(cust_id),
+   constraint customer_fk foreign key (cust_id) references users(user_id),
    constraint session_fk foreign key (session_id) references sessions(session_id)
 );
 
@@ -61,19 +69,6 @@ create table item_detail(
    constraint item_detail_pk primary key (ingredient_id, item_id)
 )
 
-drop table staff cascade;
-create table staff (
-   staff_id serial primary key,
-   house_number varchar(10) not null, 
-   city varchar(20) not null,
-   district varchar(20) not null,
-   street varchar(20) not null,
-   hourly_rate integer not null check (hourly_rate > 0),
-   phone char(10) not null,
-   first_name varchar(20) not null,
-   last_name varchar(20) not null
-);
-
 drop table sessions cascade;
 create table sessions (
    session_id serial primary key,
@@ -81,7 +76,7 @@ create table sessions (
    shift_id integer not null,
    session_date date not null,
    constraint shift_fk foreign key (shift_id) references shifts(shift_id),
-   constraint staff_fk foreign key (staff_id) references staff(staff_id)
+   constraint staff_fk foreign key (staff_id) references users(user_id)
 );
 
 drop table shifts cascade;

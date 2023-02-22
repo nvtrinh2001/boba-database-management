@@ -56,3 +56,8 @@ VALUES (3, 'Credit Card', 'Express', '2023-02-21 15:10:23', 17, 'New York', 'Que
 ----
 --truncate table orders cascade;
 --ALTER SEQUENCE orders_order_id_seq RESTART WITH 1;
+INSERT INTO orders (payment_method, delivery_method, created_date, house_number, city, district, street, cust_id)
+VALUES ('Credit Card', 'Express', '2023-02-21 15:10:23', 17, 'New York', 'Queens', 'Astoria Street', 32);
+update orders 
+set order_status = 2
+where order_id = 3;
