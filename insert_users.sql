@@ -60,19 +60,19 @@ INSERT INTO users (first_name, last_name, phone_number, email, password, user_ro
 	('David', 'Wallace', '7777777777', 'david.wallace@example.com', 'david456', 3, '1', 'Dunder Mifflin Drive', 'Scranton', 'Pennsylvania'),
 	('Karen', 'Nguyen', '5551139876', 'karen.nguyen@example.com', 'password113', 1, '1134', 'Main St', 'Downtown', 'Vancouver');
 	
-INSERT INTO users (first_name, last_name, phone_number, email, password, user_role, house_number, street, district, city) VALUES 
-	('John', 'Doe', '5551234567', 'johndoe2@example.com', 'password123', 2, '123', 'Main St', 'Central District', 'Hong Kong'),
-	('Jane', 'Doe', '5552345678', 'janedoe2@example.com', 'password123', 2, '456', 'High St', 'South District', 'Hong Kong'),
-	('Bob', 'Smith', '5553456789', 'bobsmith2@example.com', 'password123', 2, '789', 'Oak St', 'East District', 'Hong Kong'),
-	('Alice', 'Johnson', '5554567890', 'alicejohnson2@example.com', 'password123', 2, '321', 'Cedar St', 'North District', 'Hong Kong'),
-	('David', 'Lee', '5555678901', 'davidlee2@example.com', 'password123', 2, '654', 'Elm St', 'West District', 'Hong Kong'),
-	('Karen', 'Ng', '5556789012', 'karenng2@example.com', 'password123', 2, '987', 'Pine St', 'Central District', 'Hong Kong'),
-	('Sam', 'Wong', '5557890123', 'samwong2@example.com', 'password123', 2, '234', 'Birch St', 'South District', 'Hong Kong'),
-	('Maggie', 'Chan', '5558901234', 'maggiechan2@example.com', 'password123', 2, '567', 'Maple St', 'East District', 'Hong Kong'),
-	('Tom', 'Li', '5559012345', 'tomli2@example.com', 'password123', 2, '890', 'Spruce St', 'North District', 'Hong Kong'),
-	('Emily', 'Zhang', '5550123456', 'emilyzhang2@example.com', 'password123', 2, '432', 'Chestnut St', 'West District', 'Hong Kong');
+INSERT INTO users (first_name, last_name, phone_number, email, password, user_role, house_number, street, district, city, hourly_rate) VALUES 
+	('John', 'Doe', '5551234567', 'johndoe2@example.com', 'password123', 2, '123', 'Main St', 'Central District', 'Hong Kong', 20000),
+	('Jane', 'Doe', '5552345678', 'janedoe2@example.com', 'password123', 2, '456', 'High St', 'South District', 'Hong Kong', 21000),
+	('Bob', 'Smith', '5553456789', 'bobsmith2@example.com', 'password123', 2, '789', 'Oak St', 'East District', 'Hong Kong', 22000),
+	('Alice', 'Johnson', '5554567890', 'alicejohnson2@example.com', 'password123', 2, '321', 'Cedar St', 'North District', 'Hong Kong', 23000),
+	('David', 'Lee', '5555678901', 'davidlee2@example.com', 'password123', 2, '654', 'Elm St', 'West District', 'Hong Kong', 22000),
+	('Karen', 'Ng', '5556789012', 'karenng2@example.com', 'password123', 2, '987', 'Pine St', 'Central District', 'Hong Kong', 21000),
+	('Sam', 'Wong', '5557890123', 'samwong2@example.com', 'password123', 2, '234', 'Birch St', 'South District', 'Hong Kong', 20000),
+	('Maggie', 'Chan', '5558901234', 'maggiechan2@example.com', 'password123', 2, '567', 'Maple St', 'East District', 'Hong Kong', 23000),
+	('Tom', 'Li', '5559012345', 'tomli2@example.com', 'password123', 2, '890', 'Spruce St', 'North District', 'Hong Kong', 25000),
+	('Emily', 'Zhang', '5550123456', 'emilyzhang2@example.com', 'password123', 2, '432', 'Chestnut St', 'West District', 'Hong Kong', 21000);
 	
 INSERT INTO users (first_name, last_name, phone_number, email, password, user_role, house_number, street, district, city) VALUES 
 	('John', 'Doe', '5555555555', 'john.doe@example.com', 'password123', 3, '123', 'Main St', 'Downtown', 'Anytown');
 
-
+truncate table users cascade;
