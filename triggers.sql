@@ -106,7 +106,7 @@ DECLARE
     total_ingredients int;
     id int;
 begin
-	if new.order_status = 2 then
+	if old.order_status = 1 and new.order_status = 2 then
 		FOR item IN 
 			SELECT * FROM order_detail od WHERE od.order_id = NEW.order_id
 		LOOP
