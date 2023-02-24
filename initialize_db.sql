@@ -8,7 +8,8 @@ create table users (
    house_number varchar(10) not null,
    street varchar(20) not null,
    district varchar(20) not null,
-   city varchar(20) not null
+   city varchar(20) not null,
+   user_role int default 1 check (user_role = 1 or user_role = 2)
 );
 
 create table staff (
