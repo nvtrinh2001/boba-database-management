@@ -1,3 +1,4 @@
+drop table users cascade;
 create table users (
    user_id serial primary key,
    first_name varchar(20) not null,
@@ -12,6 +13,7 @@ create table users (
    user_role int default 1 check (user_role = 1 or user_role = 2)
 );
 
+drop table staff cascade;
 create table staff (
    staff_id serial primary key,
    user_id int not null,
@@ -21,6 +23,7 @@ create table staff (
    constraint inherit_fk foreign key (user_id) references users(user_id)
 );
 
+drop table orders cascade;
 create table orders (
    order_id serial primary key,
    order_status integer DEFAULT 1 check ((order_status >= 0) and (order_status <= 4)),
@@ -45,6 +48,7 @@ create table items (
    item_size integer not null check ((item_size >= 0) and (item_size <= 3))
 );
 
+drop table order_detail;
 create table order_detail(
    order_id integer not null,
    item_id integer not null,

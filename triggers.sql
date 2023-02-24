@@ -127,3 +127,5 @@ begin
 end;     
 $BODY$  
 LANGUAGE plpgsql VOLATILE COST 100;
+
+SELECT current_user;
