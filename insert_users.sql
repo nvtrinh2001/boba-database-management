@@ -1,7 +1,7 @@
 INSERT INTO users (first_name, last_name, phone_number, email, password, house_number, street, district, city, user_role) VALUES 
     ('John', 'Doe', '1134567890', 'johndoe@example.com', 'password113', '113', 'Main St', 'Downtown', 'New York', 2),
 	('Jane', 'Doe', '0987654311', 'janedoe@example.com', 'password456', '456', 'Broadway', 'Midtown', 'New York', 2),
-	('Bob', 'Smith', '1111113333', 'bobsmith@example.com', 'password789', '789', 'Park Ave', 'Uptown', 'New York', 1, 1),
+	('Bob', 'Smith', '1111113333', 'bobsmith@example.com', 'password789', '789', 'Park Ave', 'Uptown', 'New York', 1),
 	('Alice', 'Johnson', '4445556666', 'alicejohnson@example.com', 'password101', '101', '5th Ave', 'Upper East Side', 'New York', 1),
 	('Tom', 'Hanks', '7778889999', 'tomhanks@example.com', 'password111', '111', '6th Ave', 'Upper West Side', 'New York', 1),
 	('Kate', 'Middleton', '5556667777', 'katemiddleton@example.com', 'password111', '111', 'Fifth Ave', 'Gramercy Park', 'New York', 2),
@@ -58,6 +58,6 @@ INSERT INTO users (first_name, last_name, phone_number, email, password, house_n
 	('Ryan', 'Howard', '3333333333', 'ryan.howard@example.com', 'ryan456', '99', 'Cedar Street', 'New York', 'New York', 1),
 	('Jan', 'Levinson', '6666666666', 'jan.levinson@example.com', 'jan113', '5', 'Madison Avenue', 'New York', 'New York', 1),
 	('David', 'Wallace', '7777777777', 'david.wallace@example.com', 'david456', '1', 'Dunder Mifflin Drive', 'Scranton', 'Pennsylvania', 1),
-	('Karen', 'Nguyen', '5551139876', 'karen.nguyen@example.com', 'password113', '1134', 'Main St', 'Downtown', 'Vancouver');
+	('Karen', 'Nguyen', '5551139876', 'karen.nguyen@example.com', 'password113', '1134', 'Main St', 'Downtown', 'Vancouver', 1);
 	
 truncate table users cascade;
